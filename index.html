@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="jquery-3.6.4.min.js"></script>
+    <meta name="author" content="Phuc Lam"/>
+    <meta name="description"
+          content="This is a simple beginner guide on how to install and run Novel AI on your computer"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript/">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"> <!--Font-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novel AI Beginner Guide</title>
+    <!--    Smooth Scrolling Jvs-->
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="sidebar">
+            <aside style="font-size: 19px; color: white"><strong>Contents</strong></aside>
+            <hr style="width: 80%; margin-right: 50%">
+            <aside><a class="hyper2" href="#minimum">Minimum Requirements</a></aside>
+            <aside><a class="hyper2" href="#installations">Installations</a></aside>
+            <aside><a class="hyper2" href="#pre-run">Pre-run Configuration</a></aside>
+            <aside><a class="hyper2" href="#first run">First Run</a></aside>
+            <aside><a class="hyper2" href="#configuring">Configuring Web UI's Settings</a></aside>
+            <aside><a class="hyper2" href="#first image">Generating Your First Image</a></aside>
+            <aside><a class="hyper2" href="#tips">Tips For Beginners</a></aside>
+            <aside><a class="hyper2" href="#extended">Extended Explanations</a></aside>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Beginner guide to installing and running Novel AI for free [NAI Diffusion]</h1>
+        <p style="font-size: 17px">by <strong>Phuc Lam</strong></p>
+        <hr>
+        <p><a href="https://novelai.net/" target="_blank">Novel AI</a>, also known as <i>NAI Diffusion</i> and
+            <i>NAI</i>, is a cloud based, paid subscription service launched in October 2022. </p>
+        <p>The cheapest monthly pricing plan to access the image generation tool is $10. However, you can use Novel AI
+            for free on your own computer while getting the same exact results. </p>
+        <p>The purpose of this guide is to help you install and run NAI on your computer using AUTOMATIC1111's Web UI as
+            quickly as possible. I will go through everything, making it as simple as possible. </p>
+        <img src="./images/WebUI SS.png" alt="WebUI Screen"/>
+        <p>The installation will take around 10 to 15 minutes, minus download times. This guide will only cover
+            installation for Windows and Nvidia GPU.</p>
+        <img src="./images/Makima.png" alt="Makima illust" width="512"/>
+        <h2 id="minimum"><strong>Minimum Requirements</strong></h2>
+        <ul>
+            <li>Operating System: Windows 7 or newer</li>
+            <li>System Storage: GB</li>
+            <li>RAM: 16GB</li>
+            <li>GPU: Nvidia Maxwell (GTX 7xx) or newer</li>
+            <li>GPU VRAM: 2GB</li>
+        </ul>
+        <p>You can check your system hardware specifications by typing <strong>dxdiag</strong> in the search bar. You
+            can see your GPU specification under the <strong>Display 1</strong> tab. </p>
+        <p>You can also use the existing software <strong>Task Manager</strong>. When you open the program, click on
+            <strong>More details</strong> at the bottom of the program, then <strong>Performance</strong> at the top to
+            see your hardware specifications.
+        </p>
+        <h2 id="installations">Installations</h2>
+        <h3>Novel AI's Model</h3>
+        <p>Before downloading anything, you will need a torrent client. I personally recommend <br><a
+                href="https://www.qbittorrent.org/download" target="_blank"> qBittorrent</a>.
+        </p>
+        <p>You will need to download 2 files:</p>
+        <ul>
+            <li><strong>animefull-final-pruned (folder)</strong></li>
+            <li><strong>animevae.pt</strong></li>
+        </ul>
+        <p>Here's the magnet link for the Novel AI leak:<br/><span class="code">magnet:?xt=urn:btih:5bde442da86265b670a3e5ea3163afad2c6f8ecc</span>
+        </p>
+        <p> Or you can use your own link; the leak can be easily found online. Choose the source that won't harm
+            you.</p>
+        <p>Add the magnet link by clicking the <strong>Add torrent link</strong> button on the top left of qBittorrent.
+        </p>
+        <img src="./images/qBittorrent.png" alt="qBittorrent add magnet screen"/>
+        <p>Paste the magnet link into the popup window, then click <strong>Download.</strong> This window will appear,
+            if there's nothing on the right side, wait a bit as qBittorrent is retrieving the data.</p>
+        <img src="./images/NovelAI Leaks.png" alt="Choosing files to download"/>
+        <p>
+            Deselect everything except for the <strong>animefull-final-pruned</strong> folder and
+            <strong>animevae.pt</strong> that can be found in the <strong>stablekpt</strong> subfolder. <i>(You can
+            quickly deselect everything by deselecting <strong>novelaileak</strong> first).</i> Then click OK. </p>
+        <p> While you're downloading the model, you can move onto the next step. </p>
+        <h3>Python and Git</h3>
+        <p>Skip this step if you have already installed <strong>Python 3.10</strong> and <strong>Git</strong>.</p>
+        <p>Download Git from their <a href="https://git-scm.com/download/win" target="_blank">official website.</a></p>
+        <p>Get the <strong>Standalone Installer</strong> for your operating system. If you don't know whether to get
+            32-bit or 64-bit, you can check it by looking at the <strong>System type</strong> in the <strong>About your
+                PC</strong> setting.</p>
+        <p>Run the <strong>.exe</strong> file and install the software. The default settings are fine, but make sure
+            <strong>Git Bash Here</strong> under <strong>Windows Explorer Integration</strong> is enabled. </p>
+        <p> Download the latest version of Python <strong>3.10</strong> from their <a
+                href="https://www.python.org/downloads/windows/" target="_blank">official website</a>. Download the
+            <strong>Windows installer</strong> option. <i>Verify that you got the right bit version (32-bit or
+                64-bit).</i></p>
+        <p>Make sure <strong>Add python.exe to PATH</strong> is enabled when installing Python.</p>
+        <h3>AUTOMATIC1111's Web UI</h3>
+        <p>This is the browser interface you will use for your image generation. I have tried using other browser
+            interfaces, but they pale in comparison with AUTOMATIC1111.</p>
+        <p>Open Windows Explorer and create a folder where you will be installing the Web UI. For this example, I'm
+            using <strong>C:\AI Arts.</strong> <i>Make sure you have at least 15GB of storage space on your drive.</i>
+        </p>
+        <p>Right-click in the folder you just created and select <strong>Git Bash Here.</strong></p>
+        <img src="./images/Git Bash.png" alt="Git Bash Here"/>
+        <p>Paste the following command into the Git window that just popped up: <span class="code">git clone
+          https://github.com/AUTOMATIC1111/stable-diffusion-webui</span></p>
+        <p>This will start downloading AUTOMATIC1111's Web UI. It will look something like this when it finishes
+            downloading.</p>
+        <img src="./images/WebUI Install.png" alt="WebUI Installation Complete"/>
+        <h3>GPU VRAM</h3>
+        <p>If you have over 4GB of VRAM, you can skip this step.</p>
+        <p>To check your VRAM, type <strong>dxdiag</strong> into the search bar. You can check your VRAM by looking for
+            <strong>Display Memory (VRAM)</strong> under the <strong>Display 1</strong> tab. </p>
+        <img src="./images/dxdiag.png" alt="dxdiag screen"/>
+        <p>Go inside the <strong>stable-diffusion-webui</strong> folder you just downloaded, right-click <strong>webui-user.bat,</strong>
+            and select <strong>Edit</strong>. You will be adding one of these options below to <span class="code">set COMMANDLINE_ARGS=</span>
+        </p>
+        <ul>
+            <li>If you have <strong>2GB</strong> or less of VRAM, add <span class="code">--lowvram</span></li>
+            <li>If you have <strong>4GB</strong> or less of VRAM, add <span class="code">--medvram</span></li>
+        </ul>
+        <img src="./images/VRAM.png" alt="VRAM notepad"/>
+        <p>Remember to save the file.</p>
+        <h2 id="pre-run">Pre-run Configuration</h2>
+        <p>After you finish installing everything, head to the NAI leak folder, <strong>novelaileak/stablekpt.</strong>
+            You want these 2 files:</p>
+        <ul>
+            <li><strong>model.ckpt</strong> inside the <strong>animefull-final-pruned</strong>
+                folder.<br><i>(novelaileak/stablekpt/animefull-final-pruned)</i></li>
+            <li><strong>animevae.pt</strong> inside the <strong>stablekpt</strong> folder.
+                <br><i>(novelaileak/stablekpt)</i>
+            </li>
+        </ul>
+        <p>You would want to rename these 2 files so you wouldn't lose track of them when you have more models
+            installed. Here's an example of how I renamed them. Before you rename them, only rename <strong>the part
+                before the fullstops,</strong> keep everything after the fullstops the same. Here's an example of how I
+            did it:</p>
+        <ul>
+            <li><strong>model.ckpt</strong> --> <strong>novelai-full-pruned.ckpt</strong></li>
+            <li><strong>animevae.pt</strong> --> <strong>novelai-full-pruned.vae.pt</strong><br><i>(You need the
+                <strong>.vae.pt</strong> at the end)</i></li>
+        </ul>
+        <p>Move the <strong>novelai-full-pruned.ckpt</strong> file into the Web UI's folder <strong>stable-diffusion-webui/models/Stable-diffusion.</strong>
+            Then, move the <strong>animevae.pt</strong> file into the folder
+            <strong>stable-diffusion-webui/models/VAE.</strong></p>
+        <p>Now you're ready to run the program.</p>
+        <h2 id="first run">First Run</h2>
+        <p>Double-click <strong>webui-user.bat</strong> in the <strong>stable-diffusion-webui</strong> folder. This will
+            open a Command Prompt window. On its first run, it will automatically download and install additional files
+            required. This will take a few minutes.</p>
+        <p>When it finishes installing everything, you will see the line <span class="code">Running on local URL:
+          http://127.0.0.1:7860</span> at the bottom of the Command Prompt. Copy the address. This address should be the
+            same for everyone; if it's not, then don't worry.</p>
+        <img src="./images/Ready.png" alt="Local URL"/>
+        <p><i>If your internet dies while the program is downloading files, just close the Command Prompt and run
+            <strong>webui-user.bat</strong> again. This happened to me the first time I set it up.</i></p>
+        <p>Now open up your web browser <i>(whether it's Chrome, Firefox, Edge, or any other)</i> and paste in the
+            address to the search bar. It will look something like this.</p>
+        <img src="./images/WebUI Page.png" alt="Web UI starting screen"/>
+        <p><i>You won't be able to access this page from other devices or from the internet without further
+            configuration.</i></p>
+        <h2 id="configuring">Configuring Web UI's Settings</h2>
+        <p>We now need to configure some settings before we generate our first image.</p>
+        <p>First, activate the Novel AI model by selecting <strong>novelai-full-pruned.ckpt</strong> in the drop-down
+            box on the top left of the page. This will be where you change different models for the image generation if
+            you decide to add more models in the future.</p>
+        <img src="./images/Checkpoint.png" alt="Models checkpoint"/>
+        <p>Next, click on the <strong>Settings</strong> tab at the top of the page and make these 2 changes. There are a
+            lot of settings, so I recommend clicking the <strong>Show all pages</strong> button on the left side of the
+            page
+            and finding the settings by using <strong>CTRL F.</strong></p>
+        <ul>
+            <li><strong>Clip skip</strong> to <span class="code">2</span></li>
+        </ul>
+        <img src="./images/clip skip.png" alt="Clip skip"/>
+        <ul>
+            <li><strong>Eta noise delta seed</strong> to <span class="code">31337</span></li>
+        </ul>
+        <img src="./images/Eta noise.png" alt="Eta noise"/>
+        <p>Click <strong>Apply settings</strong> and <strong>Reload UI</strong> at the top of the page, then go back to
+            the <strong>txt2img</strong> tab.</p>
+        <p>I will give a simple explanation of what these changes do in the <strong><a href="#extended">Extended
+            Explanations</a></strong> section at the end of the guide. Also, I will give further, more specific
+            configurations there. </p>
+        <h2 id="first image">Generating Your First Image</h2>
+        <p>It's time for the long-awaited image generation. We will try generating a test image to check if everything
+            has been set up correctly. </p>
+        <img src="./images/Asuna Upscaled.png" alt="Asuna Test Image"/>
+        <p>In the <strong>txt2img</strong> tab, use the exact following values in their respective areas.</p>
+        <ul>
+            <li>Prompt: <span class="code">{masterpiece, best quality, highres}, asuna_(sao), 1girl, {{cherry_blossoms}},
+            choker, skirt, looking at viewer, petals, {{brown eyes}}</span></li>
+            <li>Negative prompt: <span class="code">{nsfw}, (worst quality, low quality:1.4), (depth of field, blurry:1.2),
+            (greyscale, monochrome:1.1), lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit,
+            fewer digits, cropped, normal quality, jpeg artifacts,signature, watermark, username, blurry, artist
+            name</span></li>
+            <li>Sampling method: <span class="code">Euler</span></li>
+            <li>Sampling steps: <span class="code">28</span></li>
+            <li>Width: <span class="code">512</span></li>
+            <li>Height: <span class="code">768</span></li>
+            <li>CFG Scale: <span class="code">7</span></li>
+            <li>Seed: <span class="code">1055341496</span></li>
+        </ul>
+        <p>Click the <strong>Generate</strong> button in the upper right corner and wait for the AI to render your
+            picture. You should end up with an identical picture of Asuna.</p>
+        <img src="./images/Asuna WebUI.png" alt="Asuna Web UI"/>
+        <p><i>You want the image to be at least 95% identical to the target picture. I will be making a troubleshooting
+            guide in the future.</i></p>
+        <p>I will explain some of the more confusing fields in <strong>txt2img</strong> in the <strong>Extended
+            Explainations</strong> section.</p>
+        <h2 id="tips">Tips For Beginners</h2>
+        <p>The values you used to generate the Asuna illustration aren't bad, you can keep using some of them for your
+            next generations. Try playing around with them, tweaking some of them can lead to better results. Here are
+            some tips for your AI-generated arts journey!</p>
+        <ul>
+            <li>Begin your prompts of with <span class="code">{masterpiece, best quality, highres}</span></li>
+            <li>Try using <strong>"tags"</strong> rather than sentences for your prompts. This will help you get better,
+                more consistent results
+            </li>
+            <li><strong>To get better at prompting,</strong> check out the <a
+                    href="https://danbooru.donmai.us/wiki_pages/tag_groups" target="_blank">Danbooru tag groups</a>.
+                Novel AI model and most anime models use <a href="https://danbooru.donmai.us/"
+                                                            target="_blank">Danbooru</a> for their training data. You
+                can search for tags on the website as well. <i>(This website contains a lot of NSFW; you can turn on
+                    Safe Mode in the settings by signing up)</i></li>
+            <img src="./images/Danbooru Tags.png" alt="Danbooru tags group example" width="200"/>
+            <li>Start by using the following <strong>negative prompts</strong>, they should be sufficient to give you
+                reliable
+                results: <span class="code">{nsfw}, (worst quality, low quality:1.4), (depth of field, blurry:1.2),
+            (greyscale, monochrome:1.1), lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit,
+            fewer digits, cropped, normal quality, jpeg artifacts,signature, watermark, username, blurry, artist name</span>
+            </li>
+            <li>Set your <strong>seed</strong> to <span class="code">-1</span> to randomize your results</li>
+            <li>You can get the <strong>Seed</strong> of a picture you like when generating with <strong>Seed</strong>
+                set to <span class="code">-1</span> by clicking on the picture and going below the picture. All of its
+                metadata will be here
+            </li>
+            <img src="./images/Seed.png" alt="Picture's seed"/>
+            <li>To exit the program, you only need to close the console (Command Prompt)</li>
+            <li>All generated images are automatically saved on your PC. Just click the yellow folder icon below the
+                picture, and it will open up the folder where they are stored.
+            </li>
+            <img src="./images/Locate pic.png" alt="Yellow folder icon"/>
+            <li>There is not one best setting, <strong>experiment!</strong></li>
+        </ul>
+        <p>These are everything you need to get started; continue reading if you wish to learn more!</p>
+        <h2 id="extended">Extended Explanations</h2>
+        <p>I will only be explaining the functionality of what these settings do rather than their technicality.</p>
+        <p>Read the <span class="light">highlighted text</span> if you want the TL;DR version.</p>
+        <h3>Clip Skip</h3>
+        <p>Regarding <strong>Clip skip</strong>, some trained models don't work well with <strong>Clip skip</strong>
+            being set at <span class="code">2</span>. So I recommend adding <span
+                    class="code">CLIP_stop_at_last_layers</span>
+            to the <strong>Quicksettings list</strong> in the <strong>Settings</strong> tab.</p>
+        <img src="./images/quicksettings.png" alt="Quicksettings list"/>
+        <p>This will allow you to quickly change the value of <strong>Clip skip</strong> back to <span
+                class="code">1</span> if it doesn't work well with your model. However, it does work well with the Novel
+            AI model and the majority of the current popular anime models.</p>
+        <img src="./images/Quicksettings clip.png" alt="Quicksettings clip"/>
+        <h3>Eta Noise Seed Delta</h3>
+        <p><span class="light">This setting basically adds the number you set to your seed number when you generate
+          images.</span> It's important to be able to reproduce the same image when using the same seed. The default
+            value for <strong>Eta noise seed delta</strong> is -1, which means a random number is added to the seed
+            number every time, so you can't re-generate the same image.</p>
+        <h3>VAE</h3>
+        <p>If your images come out cloudy, gray, or purple-ish, try changing the VAE.</p>
+        <p>To do this, find <strong>SD VAE</strong> and change it from <span class="code">automatic</span> to <span
+                class="code">novelai-full-pruned.vae.pt</span>.
+        </p>
+        <img src="./images/vae.png" alt="VAE setting"/>
+        <h3>txt2img</h3>
+        <ul>
+            <li>Sampling steps: <span
+                    class="light">basically how long the AI spends working and rendering on an image.</span>
+                Generally, the longer it takes, the better the results are, but at the cost of efficiency and
+                productivity. Try setting it from 22 to 25 first when you're generating images until you find the
+                image you like. Next, get its seed and increase the sampling steps. <span class="light">It's not worth it to go past 70, I often use
+            below 35.</span></li>
+            <li>Sampling method: <span class="light">how the AI generates your image.</span> These 4 popular methods I
+                have seen in a lot of Anime models are <strong>Euler a, Euler, DPM++ 2M Karras, and DPM++ SDE
+                    Karras.</strong> <span class="light"> For the Novel AI model, <strong>Euler A</strong> and <strong>Euler</strong> work well.</span>
+                The difference between these methods is sometimes minimal.
+            </li>
+            <li>CFG Scale: <span class="light">how "creative" your AI will be.</span> The higher the value, the more
+                "strict" the AI will be to your prompts when generating an image. Vice versa, the lower the value, the
+                more "creative" the results are going to be. <span class="light">I'd recommend using 6 to 8 if you want the AI to have
+            more freedom, and 10 to 13 for more focused results.</span></li>
+            <li>Batch count: <span class="light">how many batches you want to generate simultaneously.</span></li>
+            <li>Batch size: <span class="light">how many pictures per patch you want to generate</span>. I often go with
+                <span class="code">4</span> pictures in total when generating new images until I find the one I like.
+                <span class="light">Don't go over 16 pictures in total simultaneously.</span>
+            </li>
+            <li>Restore faces: <span
+                    class="light">the AI will try fixing errors on the face. Start with this off.</span>
+                From my testing, I find that it ruins the face more than it fixes it.
+            </li>
+        </ul>
+    </div>
+    <div class="right"></div>
+</div>
+</body>
+</html>
