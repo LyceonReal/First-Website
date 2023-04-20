@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"> <!--Font-->
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Novel AI Beginner Guide</title>
     <!--    Smooth Scrolling Jvs-->
@@ -39,9 +39,9 @@
             <aside><a class="hyper2" href="#minimum">Minimum Requirements</a></aside>
             <aside><a class="hyper2" href="#installations">Installations</a></aside>
             <aside><a class="hyper2" href="#pre-run">Pre-run Configuration</a></aside>
-            <aside><a class="hyper2" href="#first run">First Run</a></aside>
+            <aside><a class="hyper2" href="#first-run">First Run</a></aside>
             <aside><a class="hyper2" href="#configuring">Configuring Web UI's Settings</a></aside>
-            <aside><a class="hyper2" href="#first image">Generating Your First Image</a></aside>
+            <aside><a class="hyper2" href="#image-test">Generating Your First Image</a></aside>
             <aside><a class="hyper2" href="#tips">Tips For Beginners</a></aside>
             <aside><a class="hyper2" href="#extended">Extended Explanations</a></aside>
         </div>
@@ -149,7 +149,7 @@
                 <br><i>(novelaileak/stablekpt)</i>
             </li>
         </ul>
-        <p>You would want to rename these 2 files so you wouldn't lose track of them when you have more models
+        <p>You would want to rename these 2 files, so you wouldn't lose track of them when you have more models
             installed. Here's an example of how I renamed them. Before you rename them, only rename <strong>the part
                 before the fullstops,</strong> keep everything after the fullstops the same. Here's an example of how I
             did it:</p>
@@ -162,7 +162,7 @@
             Then, move the <strong>animevae.pt</strong> file into the folder
             <strong>stable-diffusion-webui/models/VAE.</strong></p>
         <p>Now you're ready to run the program.</p>
-        <h2 id="first run">First Run</h2>
+        <h2 id="first-run">First Run</h2>
         <p>Double-click <strong>webui-user.bat</strong> in the <strong>stable-diffusion-webui</strong> folder. This will
             open a Command Prompt window. On its first run, it will automatically download and install additional files
             required. This will take a few minutes.</p>
@@ -200,7 +200,7 @@
         <p>I will give a simple explanation of what these changes do in the <strong><a href="#extended">Extended
             Explanations</a></strong> section at the end of the guide. Also, I will give further, more specific
             configurations there. </p>
-        <h2 id="first image">Generating Your First Image</h2>
+        <h2 id="image-test">Generating Your First Image</h2>
         <p>It's time for the long-awaited image generation. We will try generating a test image to check if everything
             has been set up correctly. </p>
         <img src="./images/Asuna Upscaled.png" alt="Asuna Test Image"/>
@@ -225,7 +225,7 @@
         <p><i>You want the image to be at least 95% identical to the target picture. I will be making a troubleshooting
             guide in the future.</i></p>
         <p>I will explain some of the more confusing fields in <strong>txt2img</strong> in the <strong>Extended
-            Explainations</strong> section.</p>
+            Explanations</strong> section.</p>
         <h2 id="tips">Tips For Beginners</h2>
         <p>The values you used to generate the Asuna illustration aren't bad, you can keep using some of them for your
             next generations. Try playing around with them, tweaking some of them can lead to better results. Here are
@@ -241,7 +241,9 @@
                                                             target="_blank">Danbooru</a> for their training data. You
                 can search for tags on the website as well. <i>(This website contains a lot of NSFW; you can turn on
                     Safe Mode in the settings by signing up)</i></li>
+            </ul>
             <img src="./images/Danbooru Tags.png" alt="Danbooru tags group example" width="200"/>
+        <ul>
             <li>Start by using the following <strong>negative prompts</strong>, they should be sufficient to give you
                 reliable
                 results: <span class="code">{nsfw}, (worst quality, low quality:1.4), (depth of field, blurry:1.2),
@@ -253,12 +255,16 @@
                 set to <span class="code">-1</span> by clicking on the picture and going below the picture. All of its
                 metadata will be here
             </li>
+            </ul>
             <img src="./images/Seed.png" alt="Picture's seed"/>
+        <ul>
             <li>To exit the program, you only need to close the console (Command Prompt)</li>
             <li>All generated images are automatically saved on your PC. Just click the yellow folder icon below the
                 picture, and it will open up the folder where they are stored.
             </li>
+            </ul>
             <img src="./images/Locate pic.png" alt="Yellow folder icon"/>
+            <ul>
             <li>There is not one best setting, <strong>experiment!</strong></li>
         </ul>
         <p>These are everything you need to get started; continue reading if you wish to learn more!</p>
