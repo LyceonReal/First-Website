@@ -1,0 +1,7 @@
+User-agent: *
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: *
+User-agent: AdsBot-Google
+Allow: index.html
