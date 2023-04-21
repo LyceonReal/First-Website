@@ -4,4 +4,4 @@ Disallow: /
 
 User-agent: *
 User-agent: AdsBot-Google
-Allow: index.html
+Allow: /index.html
