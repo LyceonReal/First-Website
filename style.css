@@ -90,14 +90,14 @@ aside {
 
 /*Sidebar Hyperlink*/
 a.hyper2:link, a.hyper:active {
-    color: #767678;
+    color: #a3a4a5;
     text-decoration: none;
 }
 a.hyper2:hover {
     border-bottom: 2px solid #6e6e6e;
 }
 a.hyper2:visited {
-    color: #767678;
+    color: #a3a4a5;
     text-decoration: none;
 }
 
