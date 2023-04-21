@@ -20,6 +20,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: saturate(85%);
     max-width: 100%;
     height: auto;
     padding-bottom: 10px;
@@ -28,7 +29,6 @@ li {
     padding-bottom: 15px;
     text-align: justify;
     font-size: 22px;
-    padding-bottom: 8px;
     line-height: 35px;
     letter-spacing: 1.1px;
 }
@@ -85,19 +85,19 @@ aside {
     font-size: 19px;
     top: 50px;
     line-height: 40px;
-    margin-top: 180px;
+    margin-top: 187px;
 }
 
 /*Sidebar Hyperlink*/
 a.hyper2:link, a.hyper:active {
-    color: #6e6e6e;
+    color: #767678;
     text-decoration: none;
 }
 a.hyper2:hover {
     border-bottom: 2px solid #6e6e6e;
 }
 a.hyper2:visited {
-    color: #6e6e6e;
+    color: #767678;
     text-decoration: none;
 }
 
@@ -146,9 +146,30 @@ a:visited {
     .right, .left {
         display: none;
     }
-
+    li, p {
+        text-align: left;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 5px;
+    }
+    h2{
+        font-size: 40px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+    h3 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     .code, .wrap {
         word-wrap: break-word;
+        text-align: left
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    li, p {
+     font-size: 15px;
     }
 }
 
